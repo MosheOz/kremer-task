@@ -1,0 +1,5 @@
+<label>Filter by name:</label>
+<input type="search" [(ngModel)]="search" class="edid-list__filter">
+<div class="edid-list">
+    <app-edid-cube *ngFor="let e of edidListCubes$ | async | filter:search" [edidCube]="e"></app-edid-cube>
+</div>

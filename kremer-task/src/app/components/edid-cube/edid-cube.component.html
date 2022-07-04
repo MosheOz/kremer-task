@@ -1,0 +1,11 @@
+<div class="edid-cube" (click)="isClicked=!isClicked" [ngClass]="{'edid-cube__clicked':isClicked}">
+    <div class="edid-cube__header"
+        [ngClass]="{'edid-cube__connected': edidCube.status === 1, 'edid-cube__disconnected': edidCube.status === 0}">
+        <strong>{{ edidCube.Name}}</strong>
+        <strong>{{ edidCube.status}}</strong>
+    </div>
+    <div class="edid-cube__body">
+        <span class="edid-cube__body-resolution">{{edidCube.NativeResolution}}</span>
+        <span class="edid-cube__body-size">{{edidCube.Size}}</span>
+    </div>
+</div>
