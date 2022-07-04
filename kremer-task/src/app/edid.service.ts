@@ -22,9 +22,4 @@ export class EDIDService {
       )
     );
   }
-
-  async filterArray(name: string): Promise<IEdid[]> {
-    const res = await this.getData();
-    return res.filter((epics) => epics.Name === name);
-  }
 }
